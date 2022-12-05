@@ -5,6 +5,11 @@ title: PostgreSQL常用语句
 PostgreSQL常用语句
 <!--more-->
 
+## 连接
+```bash
+$ psql -h 10.226.133.9 -U root -p 5432
+```
+
 ## databases
 
 1. 查看数据库列表
