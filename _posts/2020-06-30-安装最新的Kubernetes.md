@@ -2,6 +2,8 @@
 layout: post
 title: 安装最新的Kubernetes
 category: [Kubernetes]
+tags:
+  - Kubernetes
 ---
 
 由于阿里源的kubeadm与容器镜像的版本对不上，这里使用另外一种方式进行安装；【众所周知，中国访问谷歌服务有些问题】

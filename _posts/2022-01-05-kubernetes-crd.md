@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 操作k8s的CRD
+tags:
+  - Kubernetes
 ---
 
 CRD的全称为`CustomResourceDefinitions`，即自定义资源。k8s拥有一些内置的资源，比如说Pod，Deployment，ReplicaSet等等，而CRD则提供了一种方式，使用户可以自定义新的资源，以扩展k8s的功能。

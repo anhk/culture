@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Kubernetes 常用命令
+tags:
+  - Kubernetes
 ---
 Kubernetes 常用命令
 <!--more-->

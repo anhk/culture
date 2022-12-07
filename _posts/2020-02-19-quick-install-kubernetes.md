@@ -2,6 +2,8 @@
 layout: post
 title: 快速部署Kubernetes
 category: Kubernetes
+tags:
+  - Kubernetes
 ---
 
 这里介绍快速部署Kubernetes的方法，需要准备至少2台主机，可以是云主机也可以是物理机；其中一台作为管理节点-Master，另外一台或多台作为Pod节点。

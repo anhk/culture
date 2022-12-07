@@ -2,6 +2,8 @@
 layout: post
 title: 为Kubernetes配置私有仓库
 category: [Kubernetes]
+tags:
+  - Kubernetes
 ---
 
 如题
