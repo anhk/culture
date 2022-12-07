@@ -119,10 +119,10 @@ $  chown $(id -u):$(id -g) $HOME/.kube/config
 
 ### 安装Flannel
 
-由于刚刚初始化的节点没有网络配置，所以需要使用Flannel初始化网络，我在官网下载的kube-flannel.yml无法创建成功，在大量Google之后找到一个好用的。这里提供[下载链接](/files/kubernetes/kube-flannel.yml)。
+由于刚刚初始化的节点没有网络配置，所以需要使用Flannel初始化网络
 
 ```bash
-$ kubectl apply -f kube-flannel.yml
+$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
 稍等一会就会创建成功，而后网络的状态信息就从NotReady变为OK了
