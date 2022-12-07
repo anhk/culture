@@ -93,35 +93,17 @@ $ ssh-copy-id -i /root/.ssh/id_rsa.pub k8s-pod
 
 ### 管理节点
 
-在Master主机上部署Kubernetes的管理节点，由于需要更换下载源为阿里云，所以需要自定义yaml文件。
+在Master主机上部署Kubernetes的管理节点，更换下载源为阿里云。
 
-```bash
-cat > k8s-init.yml << EOF
-apiVersion: kubeadm.k8s.io/v1beta2
-kind: InitConfiguration
-nodeRegistration:
-  kubeletExtraArgs:
-    pod-infra-container-image: registry.aliyuncs.com/google_containers/pause-amd64:3.1
----
-apiVersion: kubeadm.k8s.io/v1beta2
-kind: ClusterConfiguration
-imageRepository: registry.aliyuncs.com/google_containers
-kubernetesVersion: v1.17.0
-networking:
-  podSubnet: 10.244.0.0/16
-  serviceSubnet: 10.96.0.0/12
-EOF
-```
 
 文件编辑好后，就可以创建集群了，命令如下：
 
 ```bash
-$ kubeadm init --config k8s-init.yml --v=5   # --v=5为打印日志的级别
+$ kubeadm init --apiserver-advertise-address 10.226.133.3 --pod-network-cidr=10.244.0.0/16 --image-repository=registry.aliyuncs.com/google_containers --v=5
+  # --v=5为打印日志的级别
 ```
 
 **创建集群的命令会告诉如何进行后续操作，包括如何配置kubectl和slave节点。**
-
-
 
 ### 配置kubectl
 
@@ -161,3 +143,16 @@ $ kubeadm join 192.168.0.62:6443 --token 28ln2e.6xocvsm7vqmhd1zt \
 ## 结尾
 
 现在kubernetes集群就搭建好了，可以去学习kubectl命令如何使用了。
+
+
+## 问题
+
+
+### 1. Kubeadm unknown service runtime.v1alpha2.RuntimeService #4581
+
+**解决方法:**
+```
+rm /etc/containerd/config.toml
+systemctl restart containerd
+kubeadm init
+```
