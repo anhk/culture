@@ -101,8 +101,7 @@ $ ssh-copy-id -i /root/.ssh/id_rsa.pub k8s-pod
 文件编辑好后，就可以创建集群了，命令如下：
 
 ```bash
-$ kubeadm init --apiserver-advertise-address 10.226.133.3 --pod-network-cidr=10.244.0.0/16 --image-repository=registry.aliyuncs.com/google_containers --v=5
-  # --v=5为打印日志的级别
+$ kubeadm init --apiserver-advertise-address=10.226.133.3 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version=v1.23.14 --service-cidr=10.96.0.0/12 --pod-network-cidr=10.244.0.0/16 --v=5  # --v=5为打印日志的级别
 ```
 
 **创建集群的命令会告诉如何进行后续操作，包括如何配置kubectl和slave节点。**
