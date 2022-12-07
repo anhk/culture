@@ -138,6 +138,11 @@ $ kubeadm join 192.168.0.62:6443 --token 28ln2e.6xocvsm7vqmhd1zt \
     --discovery-token-ca-cert-hash sha256:0da0e28f7fa611e3a6ee49c303e7283f653696eee53a0180ec2e02a7a9a3a797
 ```
 
+### 取消主节点不可调度限制
+
+```bash
+kubectl taint nodes k8s-master node-role.kubernetes.io/master:NoSchedule-
+```
 
 
 
