@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 压缩Golang可执行程序
+tags:
+  - Golang
 ---
 
 通常golang的可执行程序普遍尺寸比较大，这里总结了压缩Golang可执行程序，缩减尺寸的方法。

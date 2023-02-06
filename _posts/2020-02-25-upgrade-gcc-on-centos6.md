@@ -2,6 +2,9 @@
 layout: post
 title: 为CentOS6系统升级较新的GCC
 category: [CentaOS, Upgrade]
+tags:
+  - Linux
+  - Gcc
 ---
 
 公司为了节省成本，需要将CentOS7上的一些程序运行在CentOS6.6上，检查了一下依赖发现最主要C++11特性，而CentOS6自带的GCC4.4.7是不支持C++11的，故需要升级系统的GCC版本。

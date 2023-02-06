@@ -2,6 +2,8 @@
 layout: post
 title: Golang使用pprof优化性能
 category: [Golang]
+tags:
+  - Golang
 ---
 
 使用pprof包来为golang程序检查性能损耗点

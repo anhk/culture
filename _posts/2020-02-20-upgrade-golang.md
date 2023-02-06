@@ -2,6 +2,8 @@
 layout: post
 title: 为CentOS&Ubuntu升级最新版本Golang
 category: [Golang, Upgrade]
+tags:
+  - Golang
 ---
 
 发现操作系统默认带的golang版本都比较低，这里描述CentOS7和Ubuntu 18.04升级到最新版本golang的步骤。

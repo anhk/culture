@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 检查Docker容器的连接数命令
+tags:
+  - Docker
 ---
 {% raw %}
 ```bash

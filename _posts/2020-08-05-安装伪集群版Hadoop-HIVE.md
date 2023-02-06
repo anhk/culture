@@ -2,6 +2,8 @@
 layout: post
 title: 安装伪集群版Hadoop-HIVE
 category: [Hadoop]
+tags:
+  - Hadoop
 ---
 
 网上搜了一些中文资料，大多前言不搭后语，按照步骤做了几次都失败了。现在记录下成功记录。
