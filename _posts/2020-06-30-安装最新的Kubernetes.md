@@ -12,7 +12,7 @@ tags:
 
 ## 安装最新版本的kubeadm和docker-ce
 
-这里不在赘述了，看 [这篇文章](/quick-install-kubernetes.html)
+这里不在赘述了，看 [这篇文章](/kubernetes/2020/02/19/quick-install-kubernetes/)
 
 
 调整docker使用`cgroupdriver=systemd`
